@@ -48,7 +48,7 @@ ProduceDictionary={
     'Celery': {
         'cost': 3.07,
         'amt_sold': 18.5,
-        'total': 56.8
+        'total': 56.79
     },
     'Spinach': {
         'cost': 4.12,
@@ -193,7 +193,7 @@ ProduceDictionary={
     'Brussels sprouts': {
         'cost': 1.65,
         'amt_sold': 22.9,
-        'total': 37.79
+        'total': 37.78
     },
     'Kale': {
         'cost': 5.02,
@@ -207,3 +207,14 @@ ProduceDictionary={
     }
 }
 
+for produce in ProduceDictionary:
+    #calculated = ProduceDictionary[produce]['cost'] * ProduceDictionary[produce]['amt_sold']
+    #stated = ProduceDictionary[produce]['total']
+    if round(ProduceDictionary[produce]['cost'] * ProduceDictionary[produce]['amt_sold'], ndigits=2) != ProduceDictionary[produce]['total']:
+        print('Produce:', produce)
+        print('Calculated Total: $',format((ProduceDictionary[produce]['cost'] * ProduceDictionary[produce]['amt_sold']), '.2f'), sep = '')
+        print('Stated Total: $',ProduceDictionary[produce]['total'], sep = '')
+        print()
+        print()
+        print()
+#Note to self when printing the key name (produce) in line 214 dont put ProduceDictionary[key] because it will preint the value pair for that key

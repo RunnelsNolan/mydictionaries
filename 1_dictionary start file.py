@@ -174,10 +174,12 @@ print()
 
 phonebook_list = list(phonebook)
 print(phonebook_list)
+print()
 random_key = random.choice(phonebook_list)
 print(random_key, phonebook[random_key])
+print()
 
-print(phonebook[random.choice(list(phonebook))]) # 6 lines above made in more line
+print(random.choice(list(phonebook)), phonebook[random.choice(list(phonebook))]) # 6 lines above made in more line
 
 print()
 print('*****  end section 9 ********')
